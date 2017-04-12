@@ -30,15 +30,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fd-Dx-69t">
+                                <rect key="frame" x="16" y="629" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="gotoNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="agj-yt-oUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipO-ux-zMk">
+                                <rect key="frame" x="64" y="629" width="59" height="30"/>
+                                <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="gotoPrevious:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFI-7P-ze4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ipO-ux-zMk" firstAttribute="leading" secondItem="3Fd-Dx-69t" secondAttribute="trailing" constant="16" id="0YR-Xe-dGr"/>
                             <constraint firstItem="jve-k2-DJg" firstAttribute="centerX" secondItem="0ts-ev-MSj" secondAttribute="centerX" id="Tk8-iq-Suy"/>
                             <constraint firstAttribute="trailing" secondItem="0ts-ev-MSj" secondAttribute="trailing" constant="29" id="WSJ-27-tCn"/>
+                            <constraint firstItem="3Fd-Dx-69t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="aTd-PV-hKO"/>
                             <constraint firstItem="0ts-ev-MSj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="anF-IW-Fbr"/>
                             <constraint firstItem="0ts-ev-MSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-56" id="bUE-HU-sN5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ipO-ux-zMk" secondAttribute="bottom" constant="8" id="jyw-1L-5w5"/>
                             <constraint firstItem="jve-k2-DJg" firstAttribute="top" secondItem="0ts-ev-MSj" secondAttribute="bottom" constant="39" id="kWH-Jz-AZt"/>
                             <constraint firstItem="0ts-ev-MSj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="o9J-CN-mZc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3Fd-Dx-69t" secondAttribute="bottom" constant="8" id="pfk-aH-TQY"/>
                             <constraint firstItem="0ts-ev-MSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="yqc-01-cfT"/>
                         </constraints>
                     </view>

@@ -13,9 +13,7 @@ class ViewController: UIViewController, GDCalendarDateDelegate {
     @IBOutlet weak var calendar: GDCalendar!
     @IBOutlet weak var dateLabel: UILabel!
     
-    
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         
         calendar.delegate = self
@@ -34,6 +32,16 @@ class ViewController: UIViewController, GDCalendarDateDelegate {
     func onDateTap(date: Date) {
         self.dateLabel.text = parseDate(date: date)
         print(date)
+    }
+    
+    @IBAction func gotoNext(_ sender: Any) {
+        // swipe right gesture is activated by default to show next month
+        calendar.gotoNextMonth()
+    }
+    
+    @IBAction func gotoPrevious(_ sender: Any) {
+        // swipe left gesture is activated by default to show previous month
+        calendar.gotoPreviousMonth()
     }
 }
 

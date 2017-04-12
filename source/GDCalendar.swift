@@ -171,7 +171,7 @@ class GDCalendar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
-    private func gotoNextMonth(){
+    public func gotoNextMonth(){
         currentDate = self.currentDate.nextMonth()
         setDates()
         generateDates()
@@ -179,7 +179,7 @@ class GDCalendar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
         topViewLabel.text = getCurrentMonthYearInfo()
     }
     
-    private func gotoPreviousMonth(){
+    public func gotoPreviousMonth(){
         currentDate = self.currentDate.previousMonth()
         setDates()
         generateDates()
