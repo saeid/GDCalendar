@@ -8,17 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GDCalendarDateDelegate {
+    
+    @IBOutlet weak var calendar: GDCalendar!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calendar.delegate = self
+        self.dateLabel.text = parseDate(date: calendar.currentDate)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func parseDate(date: Date) -> String{
+        let dc = date.componentsOfDate()
+        return "\(dc.year) / \(dc.month) / \(dc.day)".stringToPersian()
+    }
     
+    func onDateTap(date: Date) {
+        self.dateLabel.text = parseDate(date: date)
+        print(date)
+    }
 }
 

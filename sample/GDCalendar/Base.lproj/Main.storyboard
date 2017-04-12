@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,19 +22,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-ev-MSj" customClass="GDCalendar" customModule="GDCalendar" customModuleProvider="target">
-                                <rect key="frame" x="8" y="108" width="357" height="379"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="357" id="6p8-aG-SZu"/>
-                                    <constraint firstAttribute="height" constant="379" id="EQz-3T-TTE"/>
-                                </constraints>
+                                <rect key="frame" x="29" y="41" width="317" height="473"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jve-k2-DJg">
+                                <rect key="frame" x="166" y="553" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0ts-ev-MSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-36" id="bUE-HU-sN5"/>
-                            <constraint firstItem="0ts-ev-MSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-1" id="yqc-01-cfT"/>
+                            <constraint firstItem="jve-k2-DJg" firstAttribute="centerX" secondItem="0ts-ev-MSj" secondAttribute="centerX" id="Tk8-iq-Suy"/>
+                            <constraint firstAttribute="trailing" secondItem="0ts-ev-MSj" secondAttribute="trailing" constant="29" id="WSJ-27-tCn"/>
+                            <constraint firstItem="0ts-ev-MSj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="anF-IW-Fbr"/>
+                            <constraint firstItem="0ts-ev-MSj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-56" id="bUE-HU-sN5"/>
+                            <constraint firstItem="jve-k2-DJg" firstAttribute="top" secondItem="0ts-ev-MSj" secondAttribute="bottom" constant="39" id="kWH-Jz-AZt"/>
+                            <constraint firstItem="0ts-ev-MSj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="o9J-CN-mZc"/>
+                            <constraint firstItem="0ts-ev-MSj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="yqc-01-cfT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendar" destination="0ts-ev-MSj" id="VKy-cp-oPm"/>
+                        <outlet property="dateLabel" destination="jve-k2-DJg" id="O1f-gF-AdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
