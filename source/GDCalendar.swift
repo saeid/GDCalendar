@@ -27,12 +27,14 @@ class GDCalendar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
     public var topViewItemColor: UIColor = UIColor.black
     
     public var delegate: GDCalendarDateDelegate? = nil
+    public var itemsFont: UIFont = UIFont.systemFont(ofSize: 15)
+    public var headersFont: UIFont = UIFont.boldSystemFont(ofSize: 13)
     
     private var cellSize: CGFloat = 35.0
     private var cView: UICollectionView!
     private var topView: UIView!
     private var topViewLabel: UILabel!
-    
+
     
     //MARK: - view setups
     override init(frame: CGRect) {
@@ -65,7 +67,7 @@ class GDCalendar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, 
         
         topViewLabel = UILabel()
         topViewLabel.text = getCurrentMonthYearInfo()
-        topViewLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        topViewLabel.font = self.headersFont
         topViewLabel.textColor = self.topViewItemColor
         topViewLabel.sizeToFit()
         topViewLabel.textAlignment = .center
@@ -371,6 +373,10 @@ class GDCalendarItemCell: UICollectionViewCell{
     private var size: CGFloat = 0.0
     private var itemColor: UIColor = UIColor.clear
     private var headerItemColor: UIColor = UIColor.clear
+    
+    public var itemsFont: UIFont = UIFont.systemFont(ofSize: 15)
+    public var headersFont: UIFont = UIFont.boldSystemFont(ofSize: 13)
+
     private var headerLabel: UILabel!
     private var itemLabel: UILabel!
     
@@ -390,7 +396,7 @@ class GDCalendarItemCell: UICollectionViewCell{
     //MARK: - label setups
     private func generateHeaderLabel(){
         headerLabel.text = self.day
-        headerLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        headerLabel.font = self.headersFont
         headerLabel.textColor = self.headerItemColor
         headerLabel.textAlignment = .center
         headerLabel.sizeToFit()
@@ -399,7 +405,7 @@ class GDCalendarItemCell: UICollectionViewCell{
     
     private func generateItemLabel(){
         itemLabel.text = self.day
-        itemLabel.font = UIFont.systemFont(ofSize: 15)
+        itemLabel.font = self.itemsFont
         itemLabel.textColor = self.itemColor
         itemLabel.textAlignment = .center
         itemLabel.sizeToFit()

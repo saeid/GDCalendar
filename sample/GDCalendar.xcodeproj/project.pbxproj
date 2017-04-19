@@ -108,7 +108,7 @@
 				TargetAttributes = {
 					36E2DA521E99743C006ABAEA = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 3QGMH82S23;
+						DevelopmentTeam = 54N8PNS7FS;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,7 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3QGMH82S23;
+				DEVELOPMENT_TEAM = 54N8PNS7FS;
 				INFOPLIST_FILE = GDCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -288,7 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3QGMH82S23;
+				DEVELOPMENT_TEAM = 54N8PNS7FS;
 				INFOPLIST_FILE = GDCalendar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
