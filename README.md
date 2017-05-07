@@ -7,38 +7,37 @@ Customizable / Swipe gesture enabled
 
 
 
-# Requirements
-xcode 8+
-
-swift 3+
-
-iOS 8+
+## Requirements
+- Xcode 8+
+- Swift 3+
+- iOS 8+
 
 
-# Installation
-Install manually
+## Installation
+Install Manually
 ------
-Drag "GDCalendar.swift" to your project and use!
+Drag 'GDCalendar.swift' to your project and use!
 
 Install using Cocoapods
 ------
 Soon!
 
 
-# How to use
-```
-    //create an instance of GDCalendar() or assign to a view in storyboard
-    //add 'GDCalendarDateDelegate' to ViewController
+## How to use
+
+```swift
+    // Create an instance of GDCalendar() or assign to a view in storyboard
+    // Add 'GDCalendarDateDelegate' to ViewController
 
     let datePicker = GDCalendar()
 
-    //delegate func
+    // Delegate func
     func onDateTap(date: Date) {
         self.dateLabel.text = parseDate(date: date)
         print(date)
     }
 
-    //customize the view. 
+    // Customize the view. 
     datePicker.headerBackgroundColor = UIColor(red: 127 / 255, green: 124 / 255, blue: 118 / 255, alpha: 1.0)
     datePicker.headerItemColor = UIColor.white
     datePicker.itemsColor = UIColor.black
@@ -53,7 +52,7 @@ Soon!
     datePicker.headersFont = UIFont.boldSystemFont(ofSize: 13)
 
 
-    //navigate with code
+    // Navigate with code
     datePicker.gotoNextMonth()    
     datePicker.gotoPreviousMonth()
 ```
