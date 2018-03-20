@@ -46,11 +46,6 @@ Drag 'source' folder to your project and use!
     datePicker.itemsFont = UIFont.systemFont(ofSize: 15)
     datePicker.headersFont = UIFont.boldSystemFont(ofSize: 13)
 
-    func parseDate(date: Date) -> String{
-    let dc = date.componentsOfDate
-    return "\(dc.year) / \(dc.month) / \(dc.day)".convertNumbers
-    }
-
     // Navigate with code
     datePicker.gotoNextMonth()    
     datePicker.gotoPreviousMonth()
