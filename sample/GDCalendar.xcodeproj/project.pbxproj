@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D11D74205FB07E004ADC71 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D11D73205FB07E004ADC71 /* DateHelper.swift */; };
 		36E2DA571E99743C006ABAEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2DA561E99743C006ABAEA /* AppDelegate.swift */; };
 		36E2DA591E99743C006ABAEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2DA581E99743C006ABAEA /* ViewController.swift */; };
 		36E2DA5C1E99743C006ABAEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E2DA5A1E99743C006ABAEA /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19D11D73205FB07E004ADC71 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		36E2DA531E99743C006ABAEA /* GDCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E2DA561E99743C006ABAEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36E2DA581E99743C006ABAEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				36EBC7F91E9D9877001EDC55 /* GDCalendar.swift */,
+				19D11D73205FB07E004ADC71 /* DateHelper.swift */,
 			);
 			name = source;
 			path = ../../source;
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36E2DA591E99743C006ABAEA /* ViewController.swift in Sources */,
+				19D11D74205FB07E004ADC71 /* DateHelper.swift in Sources */,
 				36EBC7FA1E9D9877001EDC55 /* GDCalendar.swift in Sources */,
 				36E2DA571E99743C006ABAEA /* AppDelegate.swift in Sources */,
 			);

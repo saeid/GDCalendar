@@ -8,15 +8,20 @@
 
 import UIKit
 
-class ViewController: UIViewController, GDCalendarDateDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var calendar: GDCalendar!
     @IBOutlet weak var dateLabel: UILabel!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-        calendar.delegate = self
+//        UserDefaults.standard.set("fa_IR", forKey: "current_locale")
+        UserDefaults.standard.set("en_US", forKey: "current_locale")
+
+        calendar.dateSelectHandler = { [weak self] date in
+            let currentDate = "\(self!.parseDate(date: date)) - \(date.monthName) - \(date.dayName)"
+            self?.dateLabel.text = currentDate
+        }
         self.dateLabel.text = parseDate(date: calendar.currentDate)
     }
     
@@ -25,13 +30,8 @@ class ViewController: UIViewController, GDCalendarDateDelegate {
     }
     
     func parseDate(date: Date) -> String{
-        let dc = date.componentsOfDate()
-        return "\(dc.year) / \(dc.month) / \(dc.day)".stringToPersian()
-    }
-    
-    func onDateTap(date: Date) {
-        self.dateLabel.text = parseDate(date: date)
-        print(date)
+        let dc = date.componentsOfDate
+        return "\(dc.year) / \(dc.month) / \(dc.day)".convertNumbers
     }
     
     @IBAction func gotoNext(_ sender: Any) {
