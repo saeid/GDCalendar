@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        UserDefaults.standard.set("fa_IR", forKey: "current_locale")
-        UserDefaults.standard.set("en_US", forKey: "current_locale")
+        UserDefaults.standard.set("fa_IR", forKey: "current_locale")
+//        UserDefaults.standard.set("en_US", forKey: "current_locale")
 
         calendar.dateSelectHandler = { [weak self] date in
             let currentDate = "\(self!.parseDate(date: date)) - \(date.monthName) - \(date.dayName)"
