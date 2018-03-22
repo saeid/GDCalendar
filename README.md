@@ -1,10 +1,13 @@
 # GDCalendar
 
 ## Now with *Locale* support
-Persian Calendar component.
+Calendar component with RTL and LTR language support.
 Customizable / Swipe gesture enabled
 
 **for changing Calendar view `calendar` you need to set any locale identifier like `UserDefaults.standard.set("en_US", forKey: "current_locale")`**
+
+### ***For persian calendar set `current_locale` to `fa_IR`***
+
 
 <img width="375" alt="screen shot 2017-04-13 at 01 42 00" src="https://cloud.githubusercontent.com/assets/9967486/24979816/e6595388-1fea-11e7-8b76-b2be3040e8e5.png">
 
