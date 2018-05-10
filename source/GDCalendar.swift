@@ -79,28 +79,21 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
     }
     
     fileprivate func setTopViewConstraints(v: UIView, l: UILabel){
-        let centerX: NSLayoutConstraint = NSLayoutConstraint(item: l, attribute: .centerX, relatedBy: .equal, toItem: v, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        let centerY: NSLayoutConstraint = NSLayoutConstraint(item: l, attribute: .centerY, relatedBy: .equal, toItem: v, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        l.centerXAnchor.constraint(equalTo: v.centerXAnchor, constant: 0.0).isActive = true
+        l.centerYAnchor.constraint(equalTo: v.centerYAnchor, constant: 0.0).isActive = true
         
-        v.addConstraints([centerX, centerY])
-        
-        let top: NSLayoutConstraint = NSLayoutConstraint(item: v, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0.0)
-        let left: NSLayoutConstraint = NSLayoutConstraint(item: v, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: 0.0)
-        let right: NSLayoutConstraint = NSLayoutConstraint(item: v, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0.0)
-        let width: NSLayoutConstraint = NSLayoutConstraint(item: v, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: self.frame.width)
-        let height: NSLayoutConstraint = NSLayoutConstraint(item: v, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 50)
-        
-        self.addConstraints([top, left, right, height, width])
+        v.topAnchor.constraint(equalTo: topAnchor, constant: 0.0).isActive = true
+        v.leftAnchor.constraint(equalTo: leftAnchor, constant: 0.0).isActive = true
+        v.rightAnchor.constraint(equalTo: rightAnchor, constant: 0.0).isActive = true
+        v.widthAnchor.constraint(equalToConstant: frame.width).isActive = true
+        v.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     fileprivate func setCollectionViewConstraints(){
-        let top: NSLayoutConstraint = NSLayoutConstraint(item: topView, attribute: .bottom, relatedBy: .equal, toItem: cView, attribute: .top, multiplier: 1.0, constant: 0.0)
-        let left: NSLayoutConstraint = NSLayoutConstraint(item: cView, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: 0.0)
-        let right: NSLayoutConstraint = NSLayoutConstraint(item: cView, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0.0)
-        let bottom: NSLayoutConstraint = NSLayoutConstraint(item: cView, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0.0)
-        
-        
-        self.addConstraints([top, left, right, bottom])
+        topView.bottomAnchor.constraint(equalTo: cView.topAnchor, constant: 0.0).isActive = true
+        cView.leftAnchor.constraint(equalTo: leftAnchor, constant: 0.0).isActive = true
+        cView.rightAnchor.constraint(equalTo: rightAnchor, constant: 0.0).isActive = true
+        cView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0.0).isActive = true
     }
     
     fileprivate func generateDates(){
