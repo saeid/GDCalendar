@@ -65,6 +65,7 @@ extension Date{
     var monthName: String{
         let dtFormatter: DateFormatter = DateFormatter()
         dtFormatter.dateFormat = "MMMM"
+        dtFormatter.locale = currentCalendar.locale
         
         return dtFormatter.string(from: self)
     }
@@ -72,6 +73,7 @@ extension Date{
     var dayName: String{
         let dtFormatter: DateFormatter = DateFormatter()
         dtFormatter.dateFormat = "EEEE"
+        dtFormatter.locale = currentCalendar.locale
         
         return dtFormatter.string(from: self)
     }
