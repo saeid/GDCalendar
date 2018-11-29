@@ -32,7 +32,10 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
     fileprivate var topView: UIView!
     fileprivate var topViewLabel: UILabel!
     
-    fileprivate var direction: String = "ltr"
+    fileprivate var direction: fontDirection = .leftToRight
+    fileprivate enum fontDirection: Int{
+        case leftToRight, rightToLeft
+    }
     
     //MARK: - view setups
     override init(frame: CGRect) {
@@ -127,7 +130,7 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
         cView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         cView.translatesAutoresizingMaskIntoConstraints = false
         
-        if direction == "rtl"{
+        if direction == .rightToLeft{
             cView.semanticContentAttribute = .forceRightToLeft
         }
         cView.backgroundColor = UIColor.clear
@@ -152,7 +155,7 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
         if let lcode = cal.locale?.languageCode{
             langCode = lcode
         }
-        direction = NSLocale.characterDirection(forLanguage: langCode).rawValue == 2 ? "rtl" : "ltr"
+        direction = NSLocale.characterDirection(forLanguage: langCode).rawValue == 2 ? .rightToLeft : .leftToRight
     }
     
     fileprivate func setDates(){
@@ -172,7 +175,7 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
     fileprivate var lastIndex: IndexPath? = nil
     
     //MARK: - funcs
-    func didSwipe(_ sender: UISwipeGestureRecognizer){
+    @objc func didSwipe(_ sender: UISwipeGestureRecognizer){
         if sender.direction == .left{
             gotoPreviousMonth()
         }else if sender.direction == .right{
@@ -212,7 +215,7 @@ class GDCalendar: UIView, UIGestureRecognizerDelegate{
         self.datesArray.removeAll()
         
         var dates: [(date: Date, day: Int)?] = []
-        if direction == "rtl"{
+        if direction == .rightToLeft{
             firstDayOfMonth = startDate.startingDayOfMonth
         }else{
             firstDayOfMonth = startDate.startingDayOfMonth - 1
