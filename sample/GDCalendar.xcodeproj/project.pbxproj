@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19D11D74205FB07E004ADC71 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D11D73205FB07E004ADC71 /* DateHelper.swift */; };
 		36E2DA571E99743C006ABAEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2DA561E99743C006ABAEA /* AppDelegate.swift */; };
 		36E2DA591E99743C006ABAEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2DA581E99743C006ABAEA /* ViewController.swift */; };
 		36E2DA5C1E99743C006ABAEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E2DA5A1E99743C006ABAEA /* Main.storyboard */; };
 		36E2DA5E1E99743C006ABAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E2DA5D1E99743C006ABAEA /* Assets.xcassets */; };
 		36E2DA611E99743C006ABAEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E2DA5F1E99743C006ABAEA /* LaunchScreen.storyboard */; };
-		36EBC7FA1E9D9877001EDC55 /* GDCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EBC7F91E9D9877001EDC55 /* GDCalendar.swift */; };
-		36F62A0921D7FEB70072997A /* GDCalendarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A0821D7FEB70072997A /* GDCalendarItemCell.swift */; };
-		36F62A0B21D816F30072997A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A0A21D816F30072997A /* String+Extension.swift */; };
+		36F62A2E21D81F850072997A /* GDCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A2A21D81F850072997A /* GDCalendar.swift */; };
+		36F62A2F21D81F850072997A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A2B21D81F850072997A /* String+Extension.swift */; };
+		36F62A3021D81F850072997A /* GDCalendarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A2C21D81F850072997A /* GDCalendarItemCell.swift */; };
+		36F62A3121D81F850072997A /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F62A2D21D81F850072997A /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19D11D73205FB07E004ADC71 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		36E2DA531E99743C006ABAEA /* GDCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GDCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E2DA561E99743C006ABAEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36E2DA581E99743C006ABAEA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,9 +26,10 @@
 		36E2DA5D1E99743C006ABAEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36E2DA601E99743C006ABAEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36E2DA621E99743C006ABAEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36EBC7F91E9D9877001EDC55 /* GDCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCalendar.swift; sourceTree = "<group>"; };
-		36F62A0821D7FEB70072997A /* GDCalendarItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCalendarItemCell.swift; sourceTree = "<group>"; };
-		36F62A0A21D816F30072997A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		36F62A2A21D81F850072997A /* GDCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCalendar.swift; sourceTree = "<group>"; };
+		36F62A2B21D81F850072997A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		36F62A2C21D81F850072997A /* GDCalendarItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDCalendarItemCell.swift; sourceTree = "<group>"; };
+		36F62A2D21D81F850072997A /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		36E2DA551E99743C006ABAEA /* GDCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				36EBC7F81E9D9877001EDC55 /* source */,
+				36F62A2921D81F850072997A /* Source */,
 				36E2DA561E99743C006ABAEA /* AppDelegate.swift */,
 				36E2DA581E99743C006ABAEA /* ViewController.swift */,
 				36E2DA5A1E99743C006ABAEA /* Main.storyboard */,
@@ -73,16 +73,16 @@
 			path = GDCalendar;
 			sourceTree = "<group>";
 		};
-		36EBC7F81E9D9877001EDC55 /* source */ = {
+		36F62A2921D81F850072997A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				36EBC7F91E9D9877001EDC55 /* GDCalendar.swift */,
-				19D11D73205FB07E004ADC71 /* DateHelper.swift */,
-				36F62A0821D7FEB70072997A /* GDCalendarItemCell.swift */,
-				36F62A0A21D816F30072997A /* String+Extension.swift */,
+				36F62A2A21D81F850072997A /* GDCalendar.swift */,
+				36F62A2B21D81F850072997A /* String+Extension.swift */,
+				36F62A2C21D81F850072997A /* GDCalendarItemCell.swift */,
+				36F62A2D21D81F850072997A /* DateHelper.swift */,
 			);
-			name = source;
-			path = ../../source;
+			name = Source;
+			path = ../../source/GDCalendar/Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,11 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F62A2F21D81F850072997A /* String+Extension.swift in Sources */,
 				36E2DA591E99743C006ABAEA /* ViewController.swift in Sources */,
-				19D11D74205FB07E004ADC71 /* DateHelper.swift in Sources */,
-				36EBC7FA1E9D9877001EDC55 /* GDCalendar.swift in Sources */,
-				36F62A0921D7FEB70072997A /* GDCalendarItemCell.swift in Sources */,
-				36F62A0B21D816F30072997A /* String+Extension.swift in Sources */,
+				36F62A2E21D81F850072997A /* GDCalendar.swift in Sources */,
+				36F62A3121D81F850072997A /* DateHelper.swift in Sources */,
+				36F62A3021D81F850072997A /* GDCalendarItemCell.swift in Sources */,
 				36E2DA571E99743C006ABAEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
