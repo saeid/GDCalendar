@@ -9,7 +9,7 @@
 import Foundation
 
 extension Date{
-    var currentCalendar: Calendar{
+    public var currentCalendar: Calendar{
         var locale: Locale!
         if let localeString = UserDefaults.standard.object(forKey: "current_locale") as? String{
             locale = Locale(identifier: localeString)
@@ -19,24 +19,24 @@ extension Date{
         return locale.calendar
     }
     
-    var today: Date{
+    public var today: Date{
         let comps: DateComponents = currentCalendar.dateComponents([.year, .month, .day], from: self)
         return currentCalendar.date(from: comps)!
     }
     
-    var startingDayOfMonth: Int{
+    public var startingDayOfMonth: Int{
         return currentCalendar.component(.weekday, from: self)
     }
     
-    var startDayOfMonth: Date{
+    public var startDayOfMonth: Date{
         return currentCalendar.date(from: currentCalendar.dateComponents([.year, .month], from: currentCalendar.startOfDay(for: self)))!
     }
     
-    var endDayOfMonth: Date{
+    public var endDayOfMonth: Date{
         return currentCalendar.date(byAdding: DateComponents(month: 1, day: -1), to: startDayOfMonth)!
     }
     
-    func date(year: Int, month: Int, day: Int) -> Date{
+    public func date(year: Int, month: Int, day: Int) -> Date{
         var comps: DateComponents = DateComponents()
         comps.year = year
         comps.month = month
@@ -45,24 +45,24 @@ extension Date{
         return currentCalendar.date(from: comps)!
     }
     
-    var daysIntMonth: Int{
+    public var daysIntMonth: Int{
         return currentCalendar.range(of: .day, in: .month, for: self)!.count
     }
     
-    var componentsOfDate: (year: Int, month: Int, day: Int){
+    public var componentsOfDate: (year: Int, month: Int, day: Int){
         let comps = currentCalendar.dateComponents([.year, .month, .day], from: self)
         return (comps.year!, comps.month!, comps.day!)
     }
     
-    var nextMonth: Date{
+    public var nextMonth: Date{
         return currentCalendar.date(byAdding: DateComponents(month: 1), to: self)!
     }
     
-    var previousMonth: Date{
+    public var previousMonth: Date{
         return currentCalendar.date(byAdding: DateComponents(month: -1), to: self)!
     }
     
-    var monthName: String{
+    public var monthName: String{
         let dtFormatter: DateFormatter = DateFormatter()
         dtFormatter.dateFormat = "MMMM"
         dtFormatter.locale = currentCalendar.locale
@@ -70,7 +70,7 @@ extension Date{
         return dtFormatter.string(from: self)
     }
     
-    var dayName: String{
+    public var dayName: String{
         let dtFormatter: DateFormatter = DateFormatter()
         dtFormatter.dateFormat = "EEEE"
         dtFormatter.locale = currentCalendar.locale
@@ -78,7 +78,7 @@ extension Date{
         return dtFormatter.string(from: self)
     }
     
-    func isToday(date: Date) -> Bool{
+    public func isToday(date: Date) -> Bool{
         let result = currentCalendar.compare(self, to: date, toGranularity: .day)
         switch result{
         case .orderedSame:
@@ -88,23 +88,23 @@ extension Date{
         }
     }
     
-    var daysVeryShort: [String]{
+    public var daysVeryShort: [String]{
         return currentCalendar.veryShortWeekdaySymbols
     }
     
-    var days: [String]{
+    public var days: [String]{
         return currentCalendar.shortWeekdaySymbols
     }
     
-    var months: [String]{
+    public var months: [String]{
         return currentCalendar.monthSymbols
     }
     
-    func add(days: Int) -> Date{
+    public func add(days: Int) -> Date{
         return currentCalendar.date(byAdding: .day, value: days, to: self)!
     }
 
-    func add(months: Int) -> Date{
+    public func add(months: Int) -> Date{
         return currentCalendar.date(byAdding: .month, value: months, to: self)!
     }
 }

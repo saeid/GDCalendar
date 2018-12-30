@@ -9,7 +9,7 @@
 import Foundation
 
 extension String{
-    var convertNumbers: String{
+    public var convertNumbers: String{
         var locale: Locale!
         if let localeString = UserDefaults.standard.object(forKey: "current_locale") as? String{
             locale = Locale(identifier: localeString)
