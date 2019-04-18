@@ -297,8 +297,9 @@ extension GDCalendar: UICollectionViewDelegate, UICollectionViewDataSource, UICo
                 return
             }
             if let index = lastIndex{
-                let cellToClear: GDCalendarItemCell = collectionView.cellForItem(at: index) as! GDCalendarItemCell
-                cellToClear.unhighlightCell()
+                if let cellToClear: GDCalendarItemCell = collectionView.cellForItem(at: index) as? GDCalendarItemCell{
+                    cellToClear.unhighlightCell()
+                }
             }
             lastIndex = indexPath
             let cell: GDCalendarItemCell = collectionView.cellForItem(at: indexPath) as! GDCalendarItemCell
